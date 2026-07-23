@@ -1,8 +1,9 @@
-*{
+* {
     box-sizing: border-box;
 }
 
 .outer-container {
+    // border: 2px solid rgb(255, 0, 64);
     min-height: 100vh;
     width: 100%;
     display: flex;
@@ -10,6 +11,7 @@
 }
 
 .inner-container {
+    // border: 2px solid green;
     display: flex;
     flex: 1;
     width: 100%;
@@ -17,21 +19,39 @@
 }
 
 .left-side-container {
+    position: relative;
+    overflow: hidden;
     // border: 1px solid #565E74;
     background-color: #F8F9FF;
     width: 50%;
 
     display: flex;
-    align-items: center;
-    justify-content: center;
+    // align-items: center;
+    // justify-content: center;
 
-    padding: 50px;
+    padding: 20px;
     // padding: 150px;
+}
+
+.green-blur-image {
+    position: absolute;
+    top: -60px;
+    left: -145px;
+    width: 470px;
+    height: 365px;
+    object-fit: contain;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.logo-container {
+    position: relative;
+    z-index: 1;
 }
 
 .logo-text-container {
     // border: 2px solid purple;
-    height: 75vh;
+    height: 85vh;
     display: flex;
     flex-direction: column;
     padding: 30px;
@@ -49,12 +69,6 @@
     height: 40px;
 }
 
-.right-side-container {
-    // border: 2px solid green;
-    // height: 92vh;
-    width: 50%;
-}
-
 .gradient-text {
     background: linear-gradient(to right, #006D36, #4ADE80);
     background-clip: text;
@@ -64,7 +78,7 @@
 }
 
 .motive {
-    font-size: 40px;
+    font-size: 45px;
 }
 
 .desc {
@@ -76,15 +90,183 @@
 }
 
 .benefits {
-    border: 2px solid red;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 }
 
 .benefits-detail {
-    border: 2px solid green;
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 7px;
+}
+
+.benefit-desc {
+    color: #0B1C30;
+    font-weight: 600;
+}
+
+.dashboard_image {
+    height: 250px;
+}
+
+.right-side-container {
+    // border: 2px solid green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    // height: 92vh;
+    width: 50%;
+}
+
+.account {
+    border: 1px solid #565E74;
+    height: 60vh;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    // justify-content: space-evenly;
+    flex-direction: column;
+    padding: 50px;
+    gap: 10px;
+
+    box-shadow: 0px 0px 10px 1px #565E74;
+    border-radius: 25px;
+}
+
+.start {
+    color: #0B1C30;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.join-us {
+    color: #565E74;
+    font-size: 15px;
+}
+
+.btn1 {
+    border: none;
+    height: 50px;
+    width: 280px;
+    border-radius: 25px;
+    background-color: #006D36;
+    font-size: 15px;
+    font-weight: 600;
+    color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 109, 54, 0.35);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    transition: background-color 0.3s ease,
+                box-shadow 0.3s ease,
+                transform 0.3s ease;
+}
+
+.btn-text,
+.btn-arrow {
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.btn-arrow img {
+    width: 15px;
+    height: 15px;
+    display: block;
+}
+
+.btn1:hover {
+    cursor: pointer;
+    background-color: #017139;
+    // transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 109, 54, 0.3);
+}
+
+.btn1:hover .btn-text {
+    transform: translateX(-3px);
+}
+
+.btn1:hover .btn-arrow {
+    transform: translateX(4px);
+}
+
+.btn2 {
+    border: 1px solid #BCCABB;
+    height: 50px;
+    width: 280px;
+    border-radius: 25px;
+    background-color: white;
+    font-size: 15px;
+    font-weight: 600;
+    color: #0B1C30;
+    // box-shadow: 0 2px 5px rgba(0, 109, 54, 0.35);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn2:hover {
+    cursor: pointer;
+    background-color: #F8F9FF;;
+}
+
+.continue {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.continue span {
+  width: 40px;
+  height: 1px;
+  background-color: #565e74;
+}
+
+.continue p {
+  margin: 0;
+  white-space: nowrap;
+  color: #565E74;
+  font-size: 13px;
+}
+
+.btn3 {
+    border: none;
+    height: 50px;
+    width: 200px;
+    border-radius: 25px;
+    background-color: white;
+    font-size: 15px;
+    font-weight: 600;
+    color: #0B1C30;
+    box-shadow: 0 2px 5px rgba(0, 109, 54, 0.35);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-text,
+.google-icon {
+    display: flex;
+    align-items: center;
+}
+
+.google-icon img {
+    width: 15px;
+    height: 15px;
+    display: block;
+}
+
+.btn3:hover {
+    cursor: pointer;
+    background-color: #F8F9FF;
 }
